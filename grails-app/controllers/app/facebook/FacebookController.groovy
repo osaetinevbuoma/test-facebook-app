@@ -4,14 +4,15 @@ import grails.converters.JSON
 
 class FacebookController {
     private final String USER_AGENT = "Mozilla/5.0"
-    private String facebookHost = grailsApplication.config.app.facebook.host
-//    private String facebookHost = "https://graph.facebook.com/v2.6"
-    private String appID = grailsApplication.config.app.facebook.appID
-//    private String appID = "1139699196093856"
-    private String appSecret = grailsApplication.config.app.facebook.appSecret
-//    private String appSecret = "11d2a0470fe23d564b76287c6dd3ded4"
+   
 
     def getLongLivedToken(String token) {
+          String facebookHost = grailsApplication.config.app.facebook.host
+
+    String appID = grailsApplication.config.app.facebook.appID
+
+     String appSecret = grailsApplication.config.app.facebook.appSecret
+
         StringBuffer responseValue
 
         try {
